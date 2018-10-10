@@ -10,7 +10,7 @@ removeCopies([1,6,"a",6,"b",7,8,"a",1]); // ["b",7,8]
 
 //Solution 1:
 
-const removeCopeis = (arr, newArr = []) => arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el));
+const removeCopeis = (arr) => arr.filter(el => arr.indexOf(el) === arr.lastIndexOf(el));
 
 removeCopies([1,2,1,2,3,5,8,3,6]) //[5, 8, 6]
 removeCopies([1,6,"a",6,"b",7,8,"a",1]); // ["b",7,8]
