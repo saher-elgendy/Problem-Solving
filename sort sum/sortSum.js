@@ -24,7 +24,7 @@ const arrange = (arr) => {
   let finalResults = [];
 
   if(arr.length % 2 === 1) {
-	const middle = arr[Math.floor(arr.length/2)];
+	  const middle = arr[Math.floor(arr.length/2)];
     finalResults.push(middle);
     arr.splice(Math.floor(arr.length/2),1);
   }
