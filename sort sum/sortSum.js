@@ -25,7 +25,7 @@ const arrange = (arr) => {
   let secondHalf = [];
   let middle = [];
   const halfLen = Math.floor(arr.length / 2);
-  // if array length is odd remove the middle elements and push it to middle array
+  // if array length is odd remove the middle element and push it to middle array
   if(arr.length % 2 === 1) {
     middle.push(arr[halfLen]);
     arr.splice(halfLen, 1);
