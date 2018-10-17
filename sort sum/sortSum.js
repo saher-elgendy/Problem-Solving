@@ -18,33 +18,31 @@ Explanation of last example
 
 //solution 1 
 
-onst arrange = (arr) => {
+const arrange = (arr) => {
+  if(!Array.isArray(arr)) return null;
+
   let firstHalf = [];
   let secondHalf = [];
-  let finalResults = [];
-  const halfLen = Math.floor(arr.length/2);
-
+  let middle = [];
+  const halfLen = Math.floor(arr.length / 2);
+  
+  // if the array length is odd remove the middle elements and push it to the result array
   if(arr.length % 2 === 1) {
-    const middle = arr[halfLen];
-    finalResults.push(middle);
-    arr.splice(halfLen,1);
+    middle.push(arr[halfLen]);
+    arr.splice(halfLen, 1);
   }
-
-  for(let i = 0 ; i < halfLen ; i++) { 
-  firstHalf.push(arr[i]);
-  secondHalf.push(arr[arr.length - i-1])
+  //loop through array and push both first and second halves to two different empty arrays
+  for(let i = 0; i < halfLen; i++) { 
+    firstHalf.push(arr[i]);
+    secondHalf.push(arr[arr.length - i - 1])
   }
-
-  firstHalf.sort((a, b) => b - a).reverse();
-
+  //descending sort and reverse the first array
+  firstHalf.sort((a, b) => b - a);
+  //ascending sort the second array
   secondHalf.sort((a, b) => a - b);
-
-  for(let i =0 ; i< firstHalf.length; i++) {
-    finalResults.unshift(firstHalf[i]);
-    finalResults.push(secondHalf[i]);
-  }
-
-  return finalResults;
+  
+  //mergin the three arrays into one array
+  return [...firstHalf, ...middle, ...secondHalf];
 }
 console.log(arrange([0,2,7,4,3])); // [2, 0, 7, 3, 4]
 --------------------------------------------------------------------------------------------
@@ -55,29 +53,30 @@ function sortSum(arr){
   let newArr = arr.slice(0); 
   const sums = [];
   
-  for( let i =0 ; i< Math.floor(arr.length/2);i++){  
-    sums.push(newArr[i]+newArr[newArr.length-1-i]);
+  for( let i = 0; i < Math.floor(arr.length / 2); i++){  
+    sums.push(newArr[i] + newArr[newArr.length - i - 1]);
   }
     
   let bol = false;
   while(!bol){  
     bol= true;
 
-    for(let i=1 ; i<sums.length; i++){
-      if(sums[i-1] < sums[i]){
+    for(let i = 1; i < sums.length; i++){
+      if(sums[i - 1] < sums[i]){
         bol = false;
-        const store = sums[i-1];
-        sums[i-1] = sums[i];
+        const store = sums[i - 1];
+        sums[i - 1] = sums[i];
         sums[i] = store; 
-        const temp = newArr[i-1];
-        newArr[i-1] = newArr[i];
+
+        const temp = newArr[i - 1];
+        newArr[i - 1] = newArr[i];
         newArr[i] = temp;     
       } 
     }
   }
 
-  for( let i=0 ; i< sums.length;i++){    
-    newArr[newArr.length-1-i] = sums[i]-newArr[i];
+  for(let i = 0; i < sums.length; i++){    
+    newArr[newArr.length - 1 - i] = sums[i] - newArr[i];
   } 
  
   return newArr;
