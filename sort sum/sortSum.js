@@ -41,7 +41,7 @@ onst arrange = (arr) => {
 
   for(let i =0 ; i< firstHalf.length; i++) {
     finalResults.unshift(firstHalf[i]);
-  finalResults.push(secondHalf[i]);
+    finalResults.push(secondHalf[i]);
   }
 
   return finalResults;
