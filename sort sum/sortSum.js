@@ -25,8 +25,7 @@ const arrange = (arr) => {
   let secondHalf = [];
   let middle = [];
   const halfLen = Math.floor(arr.length / 2);
-  
-  // if the array length is odd remove the middle elements and push it to the result array
+  // if array length is odd remove the middle elements and push it to middle array
   if(arr.length % 2 === 1) {
     middle.push(arr[halfLen]);
     arr.splice(halfLen, 1);
@@ -54,7 +53,7 @@ function sortSum(arr){
   const sums = [];
   
   for( let i = 0; i < Math.floor(arr.length / 2); i++){  
-    sums.push(newArr[i] + newArr[newArr.length - i - 1]);
+    sums.push(newArr[i] + newArr[newArr.length - 1 - i]);
   }
     
   let bol = false;
