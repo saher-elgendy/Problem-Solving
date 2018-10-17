@@ -35,7 +35,7 @@ const arrange = (arr) => {
     firstHalf.push(arr[i]);
     secondHalf.push(arr[arr.length - i - 1])
   }
-  //descending sort and reverse the first array
+  //descending sort the first array
   firstHalf.sort((a, b) => b - a);
   //ascending sort the second array
   secondHalf.sort((a, b) => a - b);
