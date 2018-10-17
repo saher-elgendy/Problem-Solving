@@ -40,7 +40,7 @@ const arrange = (arr) => {
   //ascending sort the second array
   secondHalf.sort((a, b) => a - b);
   
-  //mergin the three arrays into one array
+  //merge the three arrays into one array
   return [...firstHalf, ...middle, ...secondHalf];
 }
 console.log(arrange([0,2,7,4,3])); // [2, 0, 7, 3, 4]
