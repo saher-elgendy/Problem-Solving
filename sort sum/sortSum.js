@@ -18,35 +18,6 @@ Explanation of last example
 
 //solution 1 
 
-const arrange = (arr) => {
-  if(!Array.isArray(arr)) return null;
-
-  let firstHalf = [];
-  let secondHalf = [];
-  let middle = [];
-  const halfLen = Math.floor(arr.length / 2);
-  // if array length is odd remove the middle element and push it to middle array
-  if(arr.length % 2 === 1) {
-    middle.push(arr[halfLen]);
-    arr.slice(halfLen, halfLen + 1);
-  }
-  //loop through array and push both first and second halves to two different empty arrays
-  for(let i = 0; i < halfLen; i++) { 
-    firstHalf.push(arr[i]);
-    secondHalf.push(arr[arr.length - i - 1])
-  }
-  //descending sort the first array
-  firstHalf.sort((a, b) => b - a);
-  //ascending sort the second array
-  secondHalf.sort((a, b) => a - b);
-  
-  //merge the three arrays into one array
-  return [...firstHalf, ...middle, ...secondHalf];
-}
-console.log(arrange([0,2,7,4,3])); // [2, 0, 7, 3, 4]
---------------------------------------------------------------------------------------------
-
-//solution 2
 
 function sortSum(arr){  
   let newArr = arr.slice(0); 
