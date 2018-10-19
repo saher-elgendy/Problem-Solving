@@ -22,7 +22,7 @@ Explanation of last example
 function sortSum(arr){  
   let newArr = arr.slice(0); 
   const sums = [];
-  
+
   for( let i = 0; i < Math.floor(arr.length / 2); i++){  
     sums.push(newArr[i] + newArr[newArr.length - 1 - i]);
   }
