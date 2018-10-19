@@ -23,7 +23,7 @@ const strManip = (str) => {
   let newStr = '';
 
   for(let i = 0; i < str.length; i++ ) {
-  	let upperCaseChar = str[i].toUpperCase()
+  	let upperCaseChar = str[i].toUpperCase();
     newStr += upperCaseChar + (str[i + 1] ? str[i + 1].toLowerCase() : '') + upperCaseChar + (str[i + 2] ? str[i + 2].toLowerCase() : '') + '-';
   }
 
@@ -38,4 +38,3 @@ const strManip = (str) => str.split('').map((letter, i, arr) => letter.toUpperCa
 
 ---------------------------------------------------------------------------------------------------------------
 
-//solution 2
