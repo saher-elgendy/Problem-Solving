@@ -23,7 +23,8 @@ const strManip = (str) => {
   let newStr = '';
 
   for(let i = 0; i < str.length; i++ ) {
-    newStr += str[i].toUpperCase() + (str[i + 1] ? str[i + 1].toLowerCase() : '') + str[i].toUpperCase() + (str[i + 2] ? str[i + 2].toLowerCase() : '') + '-';
+  	let upperCaseChar = str[i].toUpperCase()
+    newStr += upperCaseChar + (str[i + 1] ? str[i + 1].toLowerCase() : '') + upperCaseChar + (str[i + 2] ? str[i + 2].toLowerCase() : '') + '-';
   }
 
   return (newStr).slice(0, -1);
@@ -31,6 +32,10 @@ const strManip = (str) => {
 
 console.log(strManip('abcd'))//AbAc-BcBd-CdC-DD
 
-//ES6 one line map version
+//Es6 one line map version
 
 const strManip = (str) => str.split('').map((letter, i, arr) => letter.toUpperCase() + (arr[i + 1] ? arr[i + 1].toLowerCase() : '') + letter.toUpperCase() + (arr[i + 2] ? arr[i + 2].toLowerCase() : '')).join('-');
+
+---------------------------------------------------------------------------------------------------------------
+
+//solution 2
