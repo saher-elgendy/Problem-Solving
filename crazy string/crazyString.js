@@ -13,7 +13,7 @@ explanation of the pattern
 
 the returned string should follow this pattern
 
-first uppercase letter + next lowercase letter + first uppercase again +  nsecond next lowercase
+ uppercase letter + next lowercase letter +  same uppercase letter again +  second next lowercase
 
 */
 
