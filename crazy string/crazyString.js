@@ -30,3 +30,7 @@ const strManip = (str) => {
 }
 
 console.log(strManip('abcd'))//AbAc-BcBd-CdC-DD
+
+//ES6 one line map version
+
+const strManip = (str) => str.split('').map((letter, i, arr) => letter.toUpperCase() + (arr[i + 1] ? arr[i + 1].toLowerCase() : '') + letter.toUpperCase() + (arr[i + 2] ? arr[i + 2].toLowerCase() : '')).join('-');
