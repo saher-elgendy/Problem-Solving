@@ -39,8 +39,9 @@ const sortOrange = (arr) => {
 
   for(let i = 0; i < sortedEvenArr.length; i++) {
   	//add an even number in each cycle
-    result.push(sortedEvenArr[i])
+    result.push(sortedEvenArr[i]);
     counter++;
+    
     for(let j = counter; j < sortedOddArr.length; j++) {
       //add one odd element then break the loop
       result.push(sortedOddArr[j]);
