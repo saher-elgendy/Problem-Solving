@@ -1,12 +1,11 @@
 /*
-
-Multiple Of Sums
-Write a function that takes an array of numbers as argument and returns a number respresents multipe of sums of every two next numbers in the array
+sum of multiples
+Write a function that takes an array of numbers as argument and returns a number respresents sum of multiples of every two next numbers in the array
 
 Examples
 
-multSum([1,2,3,4,5,6]); // 3 * 7 * 11= 231
-multSum([1,2,5]) //  3 * 5 = 15
+multSum([1,2,3,4,5,6]); // 2 + 12 * 30 = 44
+multSum([1,2,5]) //  3 + 5 = 7
 
 */
 
