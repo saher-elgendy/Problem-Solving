@@ -30,22 +30,27 @@ the final result should be like this
 //Solution 1
 
 const sortOrange = (arr) => {
+  // extract the two arrays
   const sortedEvenArr = arr.filter(el => el % 2 === 0).sort((a, b) => a -b);
   const sortedOddArr = arr.filter(el => el % 2 === 1).sort((a, b) => a - b);
   let result = [];
+  //will use this variable to keep reference of the index inside the inner loop
   let counter = -1;
 
   for(let i = 0; i < sortedEvenArr.length; i++) {
+  	//add an even number in each cycle
     result.push(sortedEvenArr[i])
     counter++;
     for(let j = counter; j < sortedOddArr.length; j++) {
+      //add one odd element then break the loop
       result.push(sortedOddArr[j]);
       break;
     }
   }
-
-  return result;
+  //add remaining odd numbers if exist
+  return result.concat(sortedOddArr.slice(counter + 1));
 }
+
 
 sortOrange([72,0,12,13,42,3,28,54,22,76,50,17,53,7]); //[0,3,12,7,22,13,28,17,42,53,50,54,72,76]
 
