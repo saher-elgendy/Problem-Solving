@@ -36,5 +36,7 @@ console.log(strManip('abcd'))//AbAc-BcBd-CdC-DD
 
 const strManip = (str) => [...str].map((letter, i, arr) => letter.toUpperCase() + (arr[i + 1] ? arr[i + 1].toLowerCase() : '') + letter.toUpperCase() + (arr[i + 2] ? arr[i + 2].toLowerCase() : '')).join('-');
 
+ 
+
 ---------------------------------------------------------------------------------------------------------------
 
