@@ -13,10 +13,7 @@ multSum([1,2,5]) //  3 * 5 = 15
 
 //solution 1
 
-const multSum = (arr) => arr.reduce((acc, cur, i, array) => {
-    if(i % 2 === 0) return acc  + (cur * (array[i + 1] ? array[i + 1]  : 1));
-    return acc;  
-  } ,0); 
+const multSum = (arr) => arr.reduce((acc, cur, i, array) => i % 2 === 0 ? acc  + (cur * (array[i + 1] ? array[i + 1]  : 1)) : acc, 0);
 
 multSum([1,2,3,5,8,9,6]); //95 
 multSum([1,2,3,5,9,10]);//107
