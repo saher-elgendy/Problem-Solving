@@ -29,7 +29,7 @@ the final result should be like this
 
 //Solution 1
 
-function sortOrange(arr) {
+const sortOrange = (arr) => {
   const sortedEvenArr = arr.filter(el => el % 2 === 0).sort((a, b) => a -b);
   const sortedOddArr = arr.filter(el => el % 2 === 1).sort((a, b) => a - b);
   let result = [];
@@ -39,8 +39,8 @@ function sortOrange(arr) {
     result.push(sortedEvenArr[i])
     counter++;
     for(let j = counter; j < sortedOddArr.length; j++) {
-     result.push(sortedOddArr[j]);
-     break;
+      result.push(sortedOddArr[j]);
+      break;
     }
   }
 
@@ -53,7 +53,7 @@ sortOrange([72,0,12,13,42,3,28,54,22,76,50,17,53,7]); //[0,3,12,7,22,13,28,17,42
 
 //Solution 2
 
-function sortOrange(arr) {
+const sortOrange = (arr) => {
 
   const sortedEvenArr = arr.filter(el => el % 2 === 0).sort((a, b) => a -b);
   const sortedOddArr = arr.filter(el => el % 2 === 1).sort((a, b) => a - b);
