@@ -32,8 +32,8 @@ function sortSum(arr){
   }
     
   let bol = false;
-  while(!bol){  
-    bol= true;
+  while(!bol) {  
+    bol = true;
 
     for(let i = 1; i < sums.length; i++){
       if(sums[i - 1] < sums[i]){
