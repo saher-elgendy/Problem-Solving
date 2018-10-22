@@ -1,6 +1,7 @@
 /*
 sum of multiples
-Write a function that takes an array of numbers as argument and returns a number respresents sum of multiples of every two next numbers in the array
+Write a function that takes an array of numbers as argument and returns a number 
+respresents sum of multiples of every two next numbers in the array
 
 Examples
 
