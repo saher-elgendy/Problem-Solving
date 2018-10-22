@@ -1,8 +1,12 @@
 /*
-Write a function that takes an array of numbers as arguments and returns an array of numbers represents the original array but sorted by the sum of every two opposite elements in the array, the least sum
-put the two elements toward the middle of the array , the bigger should be toward the extremities,
+Write a function that takes an array of numbers as arguments and returns an array of numbers 
+represents the original array but sorted by the sum of every two opposite elements in the array, 
+the least sum put the two elements toward the middle of the array , the bigger should be toward 
+the extremities,
 
-Every two opposite elements means that if one is at index i the opposite should be at index (length-1-i) so element at index 0 is the opposite of element at index 6 in 7 elements array.
+
+Every two opposite elements means that if one is at index i the opposite should be at index 
+(length-1-i) so element at index 0 is the opposite of element at index 6 in 7 elements array.
 
 For example
 
