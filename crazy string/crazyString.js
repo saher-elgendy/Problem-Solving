@@ -1,7 +1,8 @@
 /*
 
 Crazy String
-Write a function that takes a string as an argument and returns another string exactly like the examples below
+Write a function that takes a string as an argument and returns another string exactly like 
+the examples below
 
 strManip("abcd")    // AbAc-BcBd-CdC-DD
 strManip("hello")  // HeHl-ElEl-LlLo-LoL-OO
