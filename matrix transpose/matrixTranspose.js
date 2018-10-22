@@ -1,5 +1,6 @@
 /*
-A matrix of two-dimensional (N*N) of integers. What you have to do is change the positions of the elements above and bellow of the main diagonal of the matrix:
+A matrix of two-dimensional (N*N) of integers. What you have to do is change the positions 
+of the elements above and bellow of the main diagonal of the matrix:
 
 Name of the function: transpose(mat) { }
 
