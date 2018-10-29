@@ -3,7 +3,9 @@
 /*
 The unique string
 
-Write a function that can take two or more strings as arguments and returns a string represent them all , all characters should be in same order in the original string but no duplication in the returned string
+Write a function that can take two or more strings as arguments and returns a string represent
+them all , all characters should be in same order in the original string but no duplication 
+in the returned string
 
 For example
 
@@ -24,7 +26,7 @@ const uniqueString = (...args) => {
   return results.join('');
 }
 
-uniqueString('abcd', 'cdfg')//'abcdfg'
+uniqueString('abcd', 'cdfg');//'abcdfg'
 uniqueString("rbanr","fzyrc"); //rbanfzyc
 --------------------------------------------------------------------------------------------------
 
