@@ -19,3 +19,18 @@ the biggest number is 10, the smallest one is 1 , now we need to get the sum of
 3 and 5 not included because they exist in the array.
 
 */
+
+function getIncompleteSum(arr) {
+  const max = Math.max(...arr);
+  const min = Math.min(...arr);
+  let result = 0;
+
+  for(let i = min; i <= max; i++) {
+    result += !arr.includes(i) ? i : 0; 
+
+  }
+
+  return result + max + min;
+}
+
+getIncompleteSum([1,3,5,10]);//47
