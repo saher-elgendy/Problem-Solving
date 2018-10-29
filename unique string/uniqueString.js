@@ -1,13 +1,5 @@
 
 
-
-
-
-
-
-
-
-
 /*
 The unique string
 
@@ -39,3 +31,7 @@ uniqueString("rbanr","fzyrc"); //rbanfzyc
 //Solution 2 (Use of Set)
 
 const uniqueString = (...args) => [...new Set(args.reduce((acc, cur) => [...acc].concat([...cur]), []))].join('');
+
+
+
+
