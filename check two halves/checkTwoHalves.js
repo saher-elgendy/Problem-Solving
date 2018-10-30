@@ -36,6 +36,20 @@ check(["a","b","d","g","f","b","g","f","a"]);// false
 check([10,20,30,40,10,20,50])  // false
 ------------------------------------------------------------------------------------------------
 
+//Solution 2(comparing by sort and toString)
+
+const checkTwoHalves = arr => {
+  const middleIndex  = Math.floor(arr.length / 2);
+  const firstHalf = arr.slice(0, middleIndex).sort();
+  const secondHalf = arr.slice(-middleIndex).sort();
+
+  return firstHalf.toString() === secondHalf.toString() ? true : false;
+}
+
+check([1,4,6,8,8,6,1,4]); // true
+check(["a","b","d","g","f","b","g","d","a"])  // true
+check(["a","b","d","g","f","b","g","f","a"]);// false
+check([10,20,30,40,10,20,50])  // false
 
 
 
