@@ -18,7 +18,7 @@ check([12,10,16,3,20]) // false
 const checkSumExist = arr => {
   for(let i = 0; i < arr.length; i++) {
     for(let j = i + 1; j < arr.length; j++) {
-      if(arr.has(arr[i] + arr[j])) return true;   
+      if(arr.includes(arr[i] + arr[j])) return true;   
     }
   }
 
