@@ -11,3 +11,18 @@ createTwoDimensional([6, 10, 15, 2, 9, 27, 100, 0, 3, 4, 36], 4); // [[6, 10, 15
 
 
 */
+
+
+//Solution one
+
+const createTwoDimensional = (arr, num) => {
+  let result = [];
+
+  for(let i = 0; i < arr.length; i = i + num){
+    result.push(arr.slice(i, i + num));
+  }
+  
+  return result;
+}
+
+createTwoDimensional([1,2,3,5,6], 2)
