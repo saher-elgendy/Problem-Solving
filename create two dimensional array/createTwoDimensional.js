@@ -25,4 +25,4 @@ const createTwoDimensional = (arr, num) => {
   return result;
 }
 
-createTwoDimensional([1,2,3,5,6], 2)
+createTwoDimensional([1,2,3,5,6], 2);
