@@ -31,7 +31,7 @@ index 0    index 1      index 2    index 3    index 4    index 5     index 6    
  upperCase('JAVASCRIPT IS THE BEST LANGUAGE EVER')//["Javascript", "iS", "thE", "besT", "langUage"]
 
 
-Note: the returned words letter should be all lowercase except the letter in the target index if exisit
+Note: the returned words letters should be all lowercase except the letter in the target index if exist
 
 */
 
