@@ -26,3 +26,17 @@ const createTwoDimensional = (arr, num) => {
 }
 
 createTwoDimensional([1,2,3,5,6], 2);
+
+
+//Solution 2 (while with splice)
+
+const createTwoDimensional = (arr, num) => {
+  let result = [];
+  while(arr.length) {
+   result = result.concat([arr.splice(0, num)])
+  }
+  
+  return result;
+}
+
+createTwoDimensional([1,2,3,5,6], 2)
