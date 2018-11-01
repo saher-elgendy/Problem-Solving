@@ -44,7 +44,7 @@ const upperCase = (str) =>
  -----------------------------------------------------------------------------------------------
 
 
-//Solution 2
+//Solution 2 (imperative one)
 
 const upperCase = (str) => {
   const strArr = str.split(' ');
@@ -52,7 +52,7 @@ const upperCase = (str) => {
 
   for(let i = 0; i < strArr.length; i++) {
     let word = '';
-    
+
     for(let j = 0; j < strArr[i].length; j++) {
       let letter = strArr[i][j];
       if(i === j ) word += letter.toUpperCase();
@@ -63,5 +63,9 @@ const upperCase = (str) => {
    
   }
 
-  return finalWordsArr.filter(word => word.toLowerCase() !== word )
+  return finalWordsArr.filter(word => word.toLowerCase() !== word);
 }
+
+
+
+
