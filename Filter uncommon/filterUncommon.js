@@ -50,7 +50,7 @@ const filter = (arr1 = [], arr2 = []) => {
     
     const merge =  notCom1.concat(notCom2).filter(el => el);
    
-    const final = [...new Set(merge)]
+    const final = [...new Set(merge)];
 
     return final
     
