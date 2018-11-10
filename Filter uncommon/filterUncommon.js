@@ -52,6 +52,6 @@ const filter = (arr1 = [], arr2 = []) => {
    
     const final = [...new Set(merge)];
 
-    return final
+    return final;
     
 }
