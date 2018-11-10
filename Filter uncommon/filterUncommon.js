@@ -11,3 +11,47 @@ the numbers that are not common between the two arrays are 5,5,8,3,7,8,4,4,9 but
 
 */
 
+
+
+//Solution 1
+
+const filter = (arr1 = [], arr2 = []) => {
+    
+    let notCom1 = arr1.filter(el => !arr2.includes(el));
+  
+    let notCom2 = arr2.filter(el => !arr1.includes(el));
+    
+    const common = arr1.filter(el => arr1.includes(el) && arr2.includes(el));
+
+    for( let i = 0 ; i< notCom1.length ; i++){
+        
+        for( let j = 0 ; j < common.length ; j++){
+            
+            if(notCom1[i] % common[j] === 0 && common[j] !== 1){
+                       
+                delete notCom1[i];
+            
+            }
+        }
+    }
+    
+  
+    for(let  x = 0 ; x< notCom2.length ; x++){
+        
+        for(let y = 0 ; y < common.length ; y++){
+            
+            if(notCom2[x] % common[y] === 0  && common[y] !== 1){
+            
+             delete notCom2[x];
+            
+            }
+         } 
+      }
+    
+    const merge =  notCom1.concat(notCom2).filter(el => el);
+   
+    const final = [...new Set(merge)]
+
+    return final
+    
+}
