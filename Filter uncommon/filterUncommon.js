@@ -26,7 +26,7 @@ const filter = (arr1, arr2) => {
   const unCommon = merge.filter(el => (!arr1.includes(el) && arr2.includes(el)) || (arr1.includes(el) && !arr2.includes(el)));
   const common = merge.filter(el => !unCommon.includes(el));
   
-  for(let i = unCommon.length - 1 ; i >= 0 ; i--) {
+  for(let i = unCommon.length - 1; i >= 0; i--) {
   	for(let j = 0; j < common.length; j++) {
   	  if(unCommon[i] % common[j] === 0 && common[j] !== 1)  unCommon.splice(i, 1);
   	}
