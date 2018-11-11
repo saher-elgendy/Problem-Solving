@@ -15,7 +15,7 @@ the numbers that are not common between the two arrays are 5,5,8,3,7,8,4,4,9 but
 
 //Solution 1
 
-function filter(arr1, arr2) {
+const filter = (arr1, arr2) => {
   const merge = [...arr1, ...arr2];
   const unCommon = merge.filter(el => (!arr1.includes(el) && arr2.includes(el)) || (arr1.includes(el) && !arr2.includes(el)));
   const common = merge.filter(el => !unCommon.includes(el));
@@ -28,4 +28,9 @@ function filter(arr1, arr2) {
   
   return [...new Set(unCommon)];
 }
+
 filter([1,6,2,5,5,8,3,7,8],[2,6,4,4,9,1]);
+
+
+
+
