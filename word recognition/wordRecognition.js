@@ -22,4 +22,8 @@ const wordRecog = (array, word) => {
   return output ? output : "no matches";
 };
 
-wordRecog(["drows","words","wtorssds","downward"],"word")
+wordRecog(["drows","words","wtorssds","downward"],"word");
+
+
+
+
