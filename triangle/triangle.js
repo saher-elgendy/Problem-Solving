@@ -20,7 +20,7 @@ triangle();// 56 77 47
 const triangle () {
   const firstAngle = Math.floor(Math.random() * (60 - 30 + 1)) + 30;
   const secondAngle = Math.floor(Math.random() * (90 - 30 + 1)) + 30;
-  const third = 180 - (firstAngle + secondAngle) 
+  const third = 180 - (firstAngle + secondAngle);
   return `${a},${b},${c}`;
 }
 
