@@ -18,11 +18,12 @@ const getMaxCoins = (amount, coins, bag = []) => {
 }
 
 const getLargetsCoin = (amount, coins) => {
+    //sorting coins
     const sortedCoins = coins.sort((a, b) => b - a);
 
     for (let i = 0; i < sortedCoins.length; i++) {
+        //get the largest coin that still smaller or equal to the amount
         const current = sortedCoins[i];
-
         if (current <= amount) return current;
     }
 }
