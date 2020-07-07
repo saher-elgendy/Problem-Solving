@@ -10,14 +10,13 @@ output: [25, 10, 5, 1, 1]
 */
 
 //solution: Greedy Algorithm
-
 const getMaxCoins = (amount, coins, bag = []) => {
     if(amount === 0 ) return bag;
-    let largestCoin = getLargetsCoin(amount, coins);
+    let largestCoin = getLargestCoin(amount, coins);
     return getMaxCoins(amount - largestCoin, coins, bag.concat([largestCoin]))
 }
 
-const getLargetsCoin = (amount, coins) => {
+const getLargestCoin = (amount, coins) => {
     //sorting coins
     const sortedCoins = coins.sort((a, b) => b - a);
 
