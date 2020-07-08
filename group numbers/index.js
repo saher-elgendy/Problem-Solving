@@ -5,15 +5,15 @@
 */
 
 // solution:
-const groupBy= (numbers, fn, bag = {}) => {
-    if(!numbers.length) return bag;
+const groupBy = (numbers, fn, bag = {}) => {
+    if (!numbers.length) return bag;
     const firstEl = fn(numbers[0]);
     const matched = numbers.filter(el => firstEl === fn(el));
     const unMatched = numbers.filter(el => firstEl !== fn(el));
     return groupBy(
         unMatched,
         fn,
-        {...bag, ...{[firstEl] : matched}}
+        { ...bag, ...{ [firstEl]: matched } }
     )
 }
 
