@@ -14,7 +14,7 @@ const groupBy = (numbers, fn, bag = {}) => {
         unMatched,
         fn,
         { ...bag, ...{ [firstEl]: matched } }
-    )
+    );
 }
 
 groupBy([6.1, 6.2, 4.3, 4], Math.floor)
