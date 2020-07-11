@@ -7,9 +7,9 @@ const primeStrength = (number) => {
     const nextPrime = getNextPrime(number);
     const mean = (nextPrime + previousPrime) / 2;
 
-    if (number > mean) return 'strong';
-    else if (number < mean) return 'weak';
-    else return 'balanced';
+    if (number > mean) return 'Strong';
+    else if (number < mean) return 'Weak';
+    else return 'Balanced';
 }
 
 const getPreviousPrime = (number) => {
