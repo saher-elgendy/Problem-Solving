@@ -6,11 +6,9 @@ respresents sum of multiples of every two next numbers in the array
 Examples
 
 multSum([1,2,3,4,5,6]); // 2 + 12 + 30 = 44
-multSum([1,2,5]) //  3 + 5 = 8
+multSum([1,2,5]) //  2 + 5 = 7
 
 */
-
-
 //solution 1
 const multSum = arr => {
   return arr.reduce((acc, cur, i, arr) => {
